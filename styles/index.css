@@ -1,0 +1,281 @@
+.scalable-wrapper {
+  resize: both;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background: #4f4f4f;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  touch-action: none;
+}
+
+.scalable-wrapper__content {
+  width: 540px;
+  height: 960px;
+  background: rgb(243, 243, 243);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.playground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+}
+
+.progress {
+  position: absolute;
+  /* color: aqua; */
+}
+
+.enemies {
+  position: absolute;
+  width: 100%;
+  height: 40000px;
+  top: -39000px;
+  left: 0px;
+}
+
+.background {
+  width: 540px;
+  left: 0px;
+  height: 2000px;
+}
+
+.background1 {
+  top: 0px;
+  pointer-events: none;
+}
+
+.background3 {
+  top: 0px;
+  pointer-events: none;
+}
+
+.background5 {
+  top: 0px;
+  pointer-events: none;
+}
+
+.background2 {
+  top: -2000px;
+  pointer-events: none;
+}
+
+.background4 {
+  top: -2000px;
+  pointer-events: none;
+}
+
+.background6 {
+  top: -2000px;
+  pointer-events: none;
+}
+
+.background7 {
+  top: 2000px;
+  pointer-events: none;
+}
+
+.background8 {
+  top: 2000px;
+  pointer-events: none;
+}
+
+.background9 {
+  top: 2000px;
+  pointer-events: none;
+}
+
+.player-container {
+  position: absolute;
+  width: 20%;
+  height: 5%;
+  top: 720px;
+  left: 205px;
+}
+
+.player {
+  position: absolute;
+  left: -1px;
+  z-index: 3;
+  height: 85px;
+  pointer-events: none;
+}
+
+.player-shadow {
+  position: absolute;
+  width: 50%;
+  height: 42px;
+  top: -25px;
+  left: -30px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.player-container .prop {
+  width: 50%;
+  height: 33%;
+  top: -9px;
+  left: 25px;
+  z-index: 4;
+}
+
+.head {
+  z-index: 4;
+  width: 50%;
+  top: 28px;
+  left: 34px;
+}
+
+.enemy {
+  pointer-events: none;
+}
+
+.projectile {
+  pointer-events: none;
+}
+
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 30000px;
+  top: -29000px;
+  left: 0px;
+}
+
+.cloud1 {
+  top: 28300px;
+  left: 200px;
+}
+
+.cloud2 {
+  top: 27000px;
+  left: -200px;
+}
+
+.cloud3 {
+  top: 23500px;
+  left: 0px;
+}
+
+.cloud4 {
+  top: 19800px;
+  left: 150px;
+}
+
+.cloud5 {
+  top: 13500px;
+  left: 0px;
+}
+
+.cloud6 {
+  top: 9500px;
+  left: -50px;
+}
+
+.cloud7 {
+  top: 500px;
+  left: -200px;
+}
+.enemy-shadow {
+  position: absolute;
+  width: 70%;
+  top: 80px;
+  left: -80px;
+  /* opacity: 0.6; */
+  pointer-events: none;
+}
+
+.phoenix-power {
+  width: 200%;
+  height: 180px;
+  top: -55px;
+  left: -55px;
+}
+
+.hidden {
+  display: none;
+}
+
+.level {
+  width: 15%;
+  top: 27px;
+  left: 10px;
+  z-index: 10;
+}
+
+.level-stroke {
+  width: 15.7%;
+  top: 26px;
+  left: 8px;
+  z-index: 10;
+}
+
+.current-score {
+  top: 66px;
+  left: 15px;
+  z-index: 10;
+}
+
+.score-all {
+  top: 63px;
+  left: 15px;
+  z-index: 10;
+}
+
+.black-screen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000da;
+  z-index: 19;
+}
+
+.endcard1 {
+  position: absolute;
+  width: 60%;
+  top: 470px;
+  left: 110px;
+  z-index: 20;
+  pointer-events: all;
+}
+
+.endcard2 {
+  position: absolute;
+  width: 60%;
+  top: 470px;
+  left: 110px;
+  z-index: 21;
+  pointer-events: all;
+}
+
+.star {
+  width: 5%;
+  filter: hue-rotate(0deg);
+}
+
+.hand {
+  position: absolute;
+  top: 880px;
+  left: 120px;
+}
+
+.swipe {
+  position: absolute;
+  top: 850px;
+  left: 110px;
+}

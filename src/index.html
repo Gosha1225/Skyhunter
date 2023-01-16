@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Arcade</title>
+    <!-- <script>
+      function getScript(e, i) {
+        var n = document.createElement("script");
+        (n.type = "text/javascript"),
+          (n.async = !0),
+          i && (n.onload = i),
+          (n.src = e),
+          document.head.appendChild(n);
+      }
+      function parseMessage(e) {
+        try {
+          var i = e.data,
+            n = i.indexOf(DOLLAR_PREFIX + RECEIVE_MSG_PREFIX);
+          if (-1 !== n) {
+            var t = i.slice(n + 2);
+            return getMessageParams(t);
+          }
+        } catch (e) {}
+
+        return {};
+      }
+      function getMessageParams(e) {
+        var i,
+          n = [],
+          t = e.split("/"),
+          a = t.length;
+        if (-1 === e.indexOf(RECEIVE_MSG_PREFIX)) {
+          if (a >= 2 && a % 2 === 0)
+            for (i = 0; a > i; i += 2)
+              n[t[i]] = t.length < i + 1 ? null : decodeURIComponent(t[i + 1]);
+        } else {
+          var o = e.split(RECEIVE_MSG_PREFIX);
+          void 0 !== o[1] && (n = JSON && JSON.parse(o[1]));
+        }
+        return n;
+      }
+      function getDapi(e) {
+        var i = parseMessage(e);
+        if (!i || i.name === GET_DAPI_URL_MSG_NAME) {
+          var n = i.data;
+          getScript(n, onDapiReceived);
+        }
+      }
+      function invokeDapiListeners() {
+        for (var e in dapiEventsPool)
+          dapiEventsPool.hasOwnProperty(e) &&
+            dapi.addEventListener(e, dapiEventsPool[e]);
+      }
+      function onDapiReceived() {
+        (dapi = window.dapi),
+          window.removeEventListener("message", getDapi),
+          invokeDapiListeners();
+      }
+      function init() {
+        window.dapi.isDemoDapi &&
+          (window.parent.postMessage(
+            DOLLAR_PREFIX +
+              SEND_MSG_PREFIX +
+              JSON.stringify({ state: "getDapiUrl" }),
+            "*"
+          ),
+          window.addEventListener("message", getDapi, !1));
+      }
+      var DOLLAR_PREFIX = "$$",
+        RECEIVE_MSG_PREFIX = "DAPI_SERVICE:",
+        SEND_MSG_PREFIX = "DAPI_AD:",
+        GET_DAPI_URL_MSG_NAME = "connection.getDapiUrl",
+        dapiEventsPool = {},
+        dapi = window.dapi || {
+          isReady: function () {
+            return !1;
+          },
+          addEventListener: function (e, i) {
+            dapiEventsPool[e] = i;
+          },
+          removeEventListener: function (e) {
+            delete dapiEventsPool[e];
+          },
+          isDemoDapi: !0,
+        };
+      init();
+    </script> -->
+    <!-- <script
+      type="text/javascript"
+      src="https://tpc.googlesyndication.com/pagead/gadgets/html5/api/exitapi.js"
+    ></script> -->
+  </head>
+  <body>
+    <!-- <script type="text/javascript">
+      window.FBPlayableOnCTAClick = () => {
+        typeof FbPlayableAd === "undefined"
+          ? alert("FBPlayableAd.onCTAClick")
+          : FbPlayableAd.onCTAClick();
+      };
+    </script> -->
+    <div class="scalable-wrapper" id="scalable-wrapper">
+      <div class="scalable-wrapper__content" id="scalable-wrapper__content">
+        <img class="background background5" />
+        <img class="background background6" />
+        <img class="background background9" />
+        <img class="background background3" />
+        <img class="background background4" />
+        <img class="background background8" />
+        <img class="background background1" />
+        <img class="background background2" />
+        <img class="background background7" />
+
+        <div class="clouds">
+          <img class="cloud cloud1" />
+          <img class="cloud cloud2" />
+          <img class="cloud cloud3" />
+          <img class="cloud cloud4" />
+          <img class="cloud cloud5" />
+          <img class="cloud cloud6" />
+          <img class="cloud cloud7" />
+        </div>
+        <div class="playground">
+          <div class="stars hidden">
+            <img class="star star1" />
+            <img class="star star2" />
+            <img class="star star3" />
+            <img class="star star4" />
+            <img class="star star5" />
+            <img class="star star6" />
+            <img class="star star7" />
+            <img class="star star8" />
+          </div>
+          <div class="enemies"></div>
+          <div class="player-container">
+            <img class="player-shadow" />
+            <img class="phoenix-power hidden" />
+            <img class="player" />
+            <img class="head" />
+            <img class="prop" />
+          </div>
+        </div>
+        <p class="score-text">0</p>
+        <p class="slide">SLIDE TO SHOOT</p>
+        <def class="score-all">
+          <svg
+            width="510"
+            height="18"
+            viewBox="0 0 510 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="510"
+              height="8"
+              rx="4"
+              transform="matrix(1 0 0 -1 5 13)"
+              fill="#11331B"
+            />
+            <rect
+              x="-2.5"
+              y="2.5"
+              width="782"
+              height="13"
+              rx="6.5"
+              transform="matrix(1 0 0 -1 5 18)"
+              stroke="black"
+              stroke-opacity="0.15"
+              stroke-width="5"
+            />
+          </svg>
+        </def>
+        <def class="current-score">
+          <svg
+            width="520"
+            height="13"
+            viewBox="0 0 520 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="2"
+              y="2"
+              width="100"
+              height="7"
+              fill="#077CBE"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </def>
+        <img class="level-stroke" />
+        <img class="level" />
+        <def class="hand"
+          ><svg
+            width="33"
+            height="39"
+            viewBox="0 0 33 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32.0477 33.6805L19.0477 38.6805C17.5475 34.6804 11.5478 30.1805 6.04778 26.6805C0.547777 23.1805 -0.952223 19.6805 0.547777 18.1805C2.04778 16.6805 8.04785 20.6805 9.04767 19.6805C10.0475 18.6805 0.547668 1.68047 5.04767 0.180472C9.54767 -1.31953 9.58718 6.9445 12.5477 9.68047C14.5 11.4847 14.9521 6.78901 18.5 10.4847C20.4521 8.78894 21.9523 8.78896 23.5 10.9847C26.5 7.98474 28.0477 12.6804 30.0477 16.6804C32.0477 20.6804 31.0477 27.1805 30.5477 28.6805C30.1477 29.8805 31.381 32.5138 32.0477 33.6805Z"
+              fill="white"
+            />
+          </svg>
+        </def>
+        <def class="swipe"
+          ><svg
+            width="311"
+            height="5"
+            viewBox="0 0 311 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="2.5" x2="311" y2="2.5" stroke="white" stroke-width="5" />
+          </svg>
+        </def>
+        <div class="black-screen" style="opacity: 0"></div>
+        <img class="endcard1" style="transform: scale(0)" />
+        <img class="endcard2" style="transform: scale(0)" />
+      </div>
+    </div>
+  </body>
+</html>
